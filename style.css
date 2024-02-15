@@ -129,7 +129,7 @@ body {
     .card {
         position: fixed;
         top: 0;
-        left: calc(100% - 500px);
+        left: 100%;
         width: 500px;
         background-color: gray;
         height: 100vh;
@@ -163,5 +163,18 @@ body {
         align-items: center;
         font-weight: bold;
         cursor: pointer;
+    }
+
+    .card .checkout div:nth-child(2) {
+        background-color: black;
+        color: white;
+    }
+
+    .active .card {
+        left: calc(100% - 500px);
+    }
+
+    .active .container {
+        transform: translateX(-200px);
     }
 }
