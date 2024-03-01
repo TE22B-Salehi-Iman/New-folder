@@ -1,151 +1,139 @@
-/* Mobile Styles läggs i body och läses in som standard*/
-
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.home {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 2fr 0.5fr 2fr 1.5fr;
+    margin: 0px;
+    background-image: url("./img/cabofibaaaa.webp");
 }
+
+/* Main Menu */
 
 header {
+    grid-area: 1/ 1/ 2/ 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rebeccapurple;
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+.sections {
+    grid-area: 2/ 1/ 3/ 5;
+    display: flex;
+    justify-content: space-evenly;
+    margin-block: 10px;
+}
+
+.quick_info {
+    grid-area: 3/ 3/ 4 / 5;
+    border: 3px solid white;
+    border-radius: 25px;
+    padding-inline: 10px;
+    background-color: rebeccapurple;
+    color: white;
+}
+
+.quick_info p {
+    font-size: 26px;
+}
+
+.popular_product {
+    grid-area: 5/ 1/ 6/ 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-block: 20px;
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: rebeccapurple;
+    color: white;
+}
+
+.bigdeal {
+    background-color: white;
+    margin-block: 15px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+footer {
+    grid-area: 6/1/7/5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rebeccapurple;
+    color: white;
+    border-top: 3px solid white;
+}
+
+footer p {
+    font-size: 26px;
+}
+
+/* buttons */
+button {
+    width: 75px;
+    height: 39.77px;
+}
+
+/* shop main */
+.shopmain {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr 2fr 0.5fr 2fr 1.5fr;
+    margin: 0px;
+    background-image: url("./img/cabofibaaaa.webp");
+}
+
+.shopmain header {
+    grid-area: 1 / 1 / 2 / 5;
+}
+
+.choices {
+    grid-area: 2 / 1 / 3 / 5;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.popular1 {
+    grid-area: 3 / 1 / 4 / 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rebeccapurple;
+    color: white;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+.popular2 {
+    grid-area: 5 / 1 / 6 / 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rebeccapurple;
+    color: white;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+.products {
+    grid-area: 4 / 1 / 5 / 5;
     display: flex;
     justify-content: center;
 }
 
-
-
-/* Tablet Styles reglerna läses in om bredden */
-
-@media only screen and (min-width: 641px) and (max-width: 1007px) {
-
-    body {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr 2fr 2fr 1.5fr;
-        margin: 0px;
-    }
-
-    /* Main Menu */
-    header {
-        grid-area: 1 / 1 / 2 / 3;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .sections {
-        grid-area: 2 / 1 / 4 / 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    footer {
-        grid-area: 4 / 1 / 5/ 3;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-/* Desktop Styles */
-
-@media only screen and (min-width: 1008px) {
-
-    .home {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 0.5fr 2fr 0.5fr 2fr 1.5fr;
-        margin: 0px;
-        background-image: url("./img/cabofibaaaa.webp");
-    }
-
-    /* Main Menu */
-
-    header {
-        grid-area: 1/ 1/ 2/ 5;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rebeccapurple;
-        color: white;
-        border-bottom: 3px solid white;
-    }
-
-    .sections {
-        grid-area: 2/ 1/ 3/ 5;
-        display: flex;
-        justify-content: space-evenly;
-        margin-block: 10px;
-    }
-
-    .quick_info {
-        grid-area: 3/ 3/ 4 / 5;
-        border: 3px solid white;
-        border-radius: 25px;
-        padding-inline: 10px;
-        background-color: rebeccapurple;
-        color: white;
-    }
-
-    .quick_info p {
-        font-size: 26px;
-    }
-
-    .popular_product {
-        grid-area: 5/ 1/ 6/ 3;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-block: 20px;
-        border: 3px solid white;
-        border-radius: 10px;
-        background-color: rebeccapurple;
-        color: white;
-    }
-
-    .bigdeal {
-        background-color: white;
-        margin-block: 15px;
-        border: 2px solid white;
-        border-radius: 10px;
-    }
-
-    footer {
-        grid-area: 6/1/7/5;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rebeccapurple;
-        color: white;
-        border-top: 3px solid white;
-    }
-
-    footer p {
-        font-size: 26px;
-    }
-
-    /* buttons */
-    button {
-        width: 75px;
-        height: 39.77px;
-    }
-
-    /* shop main */
-    .shopmain header {
-        grid-area: 1 / 1 / 2 / 5;
-    }
-
-    .choices {
-        grid-area: 2 / 1 / 3 / 5;
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .products {
-        grid-area: 3 / 1 / 4 / 5;
-        display: flex;
-        flex-direction: row;
-        margin: 10px;
-    }
+.products div {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 204px;
+    width: 204px;
+    border: 3px solid white;
+    border-radius: 10px;
+    margin: 7px;
 }
